@@ -33,6 +33,7 @@ class CreditCard:
     def __str__(self):
         return "Banco: " + self.banco + "\nEmisor: " + self.emisor + "\nCliente: " + self.cliente
 
+# Creacion de un objeto
 cc = CreditCard()
 cc.banco = 'BAC'
 cc.emisor = 'Visa'
@@ -44,8 +45,10 @@ cc.set_saldo(66000)
 print(cc.get_saldo())
 # Aqui llama al metodo __str__
 print(cc)
-
+# Impresion del diccionario con los atributos del objeto
 print(cc.__dict__)
+
+# Manipulacion del atributo de clase (estatico)
 print('Tasa antes: ', CreditCard.TASA_SOBREGIRO)
 CreditCard.TASA_SOBREGIRO = 0.07
 
